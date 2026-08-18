@@ -30,10 +30,10 @@ fix error msvcp140.dll      → common DLL fix
 list apps                   → 18 supported applications
 ```
 
-**18 Supported Applications** — Adobe Photoshop, Premiere Pro, Illustrator,
+**31 Supported Applications** — Adobe Photoshop, Premiere Pro, Illustrator,
 After Effects, AutoCAD, Autodesk 3ds Max, Microsoft Word, Microsoft Excel,
 VLC Media Player, OBS Studio, Visual Studio Code, 7-Zip, WinRAR,
-HandBrake, Blender, Discord, Spotify and Zoom.
+HandBrake, Blender, Discord, Spotify and Zoom and more.
 
 ---
 
@@ -54,7 +54,7 @@ list games                  → 36 supported games
 what games can i play       → check which supported games will run
 ```
 
-**36 Supported Games** — GTA series, NFS, Max Payne, CS, Minecraft, Valorant,
+**76 Supported Games** — GTA series, NFS, Max Payne, CS, Minecraft, Valorant,
 Witcher, Assassin's Creed, Batman Arkham, RDR2, Cyberpunk, Elden Ring, PUBG,
 Fortnite, FIFA, Rocket League, Hogwarts Legacy, Mortal Kombat 11 and more.
 
@@ -138,6 +138,7 @@ create a flutter app named myapp
 create a react native app named myapp
 
 ```
+> 💡 **New in v5.7.0:** If you leave out the project name (e.g. just `create a streamlit dashboard`), Hridaya OS will now ask you for one instead of failing silently.
 > 💡 **Pro Tip:** We keep the default menu concise so you aren't buried in choices. However, Hridaya OS also supports **SvelteKit, Astro, Bun, Remix, Hono, Elysia, and T3**. Just type `create a <framework> app named <name>` and it will scaffold automatically!
 ---
 
@@ -163,42 +164,21 @@ hridaya-os/
 
 ## 🗺️ Roadmap — v5.x.0 Continuous Improvement
 
-### ✅ v5.0.0 — Real-Time Detection Engine
-> Upgrading Game + App Management from database matching to actual system detection.
+### ✅ v5.8.0 — Diagnostics Depth: Dev Runtimes, Games & Anti-Cheat (Current Release)
+- **Developer Environment Diagnostics:** Cross-platform checks for Node.js, Python, Rust, Go, and Java — works on Windows, macOS, and Linux, since a missing runtime matters everywhere, not just Windows. Automatically included in `scan app`/`fix app` for apps that need one (e.g. DBeaver needs Java).
+- **Game Detection Accuracy Pass:** Found and fixed real bugs while auditing `game.js` against `app.js`'s v5.6.0 fixes — VC++ 2017/2019 were missing entirely from the check list (any game requiring them, like GTA Trilogy: Definitive Edition, always failed the check even when correctly installed), .NET 4.0/4.5/4.8 all checked the same registry key and reported identically, and all DLL/DirectX paths were hardcoded to `C:\Windows` instead of resolving the real system drive.
+- **Cross-Platform Game Scanning:** `scan game` no longer refuses entirely on macOS/Linux — Java-based games (Minecraft Java Edition) now get a real Java check on any OS, while Windows-only checks (DirectX, DLLs) are skipped cleanly with a clear note instead of a blanket error.
+- **Anti-Cheat Conflict Detection:** New check for Vanguard (Valorant), Easy Anti-Cheat (Fortnite, Apex, Rocket League), and BattlEye (PUBG, Destiny 2) — flags whether the anti-cheat service is actually running, and whether known-conflicting tools (Cheat Engine, Process Hacker, x64dbg) are open at the same time.
 
-| What | How |
-|------|-----|
-| `scan installed games` | Scans Steam, Epic, Rockstar, EA, Ubisoft + common game paths |
-| `scan installed apps` | Finds installed desktop apps and software across your PC |
-| `real scan gta_sa.exe` | Finds exact install path → tests real system & game DLLs |
-| `detect launchers` | Shows all game launchers installed on your PC |
-| `real scan photoshop.exe` | Finds actual install path → tests real system & apps DLLs |
+### 📅 v5.9.0 — Trust & Data Integrity (Next Release)
+- **Automated Database Verification:** A `verify-db` check run before every publish that catches duplicate keys/names automatically — the kind of bug that let Genshin Impact and Stardew Valley silently exist twice in `gameDB.js` until it was caught by hand in v5.6.0.
+- **Community-Contributed Error Reports:** A structured way for users to submit a DLL/error Hridaya OS doesn't recognize yet, since no solo maintainer can personally hit every error on every OS/language setup worldwide.
+- **Steam Deck / Proton Compatibility Notes:** Flag known Linux/Proton quirks for games that have them.
 
-### ✅ v5.1.0 — Smart Game & Multi-Drive Engine 
-- **Multi-Drive Scanning:** Automatically finds games on secondary drives (`D:\`, `E:\`, `F:\`) — no manual path setting needed.
-- **Standalone & Cracked Game Support:** Now detects classic and direct-installed games (GTA series, old PC games, non-launcher titles).
-- **Smarter Launcher Detection:** Instantly finds Steam, Epic Games, Rockstar, EA, and Ubisoft even if installed in custom folders.
-- **Multi-Library Steam Support:** Auto-scans all your Steam library folders across every connected SSD/HDD.
-- **Expanded Coverage:** Game database expanded to 51+ titles and 100+ common missing DLL error fixes.
-
-### ✅ v5.1.1 — System App Engine Patch
-- **Engine Hotfix:** Fixed app detection scanner for deep subfolder structures and multi-drive installations.
-
-### ✅ v5.2.0 — Application Management Expansion 
-- **Expanded Application Suite:** Database expanded to 28 major software suites, adding Adobe CC (Audition), Autodesk (Maya, Revit), MS Office (PowerPoint), Visual Studio, and JetBrains IDEs (IntelliJ, PyCharm, WebStorm, CLion, Rider).
-- **Deep Application Diagnostics:** Advanced DLL detection, version-specific crash resolutions, and runtime fixes for development & creative environments.
-- **Enhanced Scanning Engine:** 2-level directory traversal across all connected drives (`C:`, `D:`, `E:`) and per-user AppData directories.
-
-### ✅ v5.3.0 — Project Scaffolding Expansion (Current Release)
-- Modern Web: SvelteKit, Astro, Remix, Bun (create a bun app named myapp)
-- Mobile & Hybrid: Expo, Capacitor (create an expo app named myapp)
-- Backend & APIs: Hono, Elysia, tRPC, NestJS, Spring Boot
-- Full-Stack Templates: T3 Stack, MERN, MEAN (create a mern project named myapp)
-
-### 📅 v5.4.0 — Cross-Platform Support (Next Release)
-- Runs Smoothly on Mac, Linux & Mobile: Full support for Mac, Linux, and Android (Termux) alongside Windows.
-- Smart Feature Protection: If you run Windows-only commands (like DirectX or DLL fixes) on a Mac or Linux, Hridaya OS will safely warn you instead of crashing.
-- Better File & System Tracking: Disk and memory stats now work accurately across every operating system.
+### 📅 v5.10.0 — Unified Diagnostics
+- **One Unified Scan:** A single `check my system` command that runs app, game, and dev-runtime diagnostics together and reports back in one place, instead of three separate commands.
+- **Self-Update Awareness:** Hridaya OS checks its own npm version on start and tells you if a newer release exists.
+- **Usage-Driven Scaffolding Stacks:** New scaffolding stacks get added based on what people actually type and fail to match, not guesses.
 
 ---
 
