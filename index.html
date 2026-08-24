@@ -768,7 +768,7 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-badge">🌸 v5.8.0 — 5 Core Modules Complete!</div>
+    <div class="hero-badge">🌸 v5.10.0 — 5 Core Modules Complete!</div>
     <h1>Stop memorizing<br /><span class="highlight">computer commands.</span></h1>
     <p class="hero-tagline">Hridaya OS lets you talk to your computer in plain English — manage files, memory, disks,
       games, applications and create projects just by saying what you want.</p>
@@ -795,7 +795,7 @@
 
   <div class="stats">
     <div class="stat-item">
-      <div class="stat-num">3.7k+</div>
+      <div class="stat-num">4.0k+</div>
       <div class="stat-label">npm Downloads</div>
     </div>
     <div class="stat-item">
@@ -886,13 +886,13 @@
           <div class="dot dr"></div>
           <div class="dot dy"></div>
           <div class="dot dg"></div>
-          <div class="t-title">hridaya-os — terminal — v5.8.0</div>
+          <div class="t-title">hridaya-os — terminal — v5.10.0</div>
         </div>
         <div class="t-body">
           <span class="t-line t-banner">
             ╔══════════════════════════════════════════════╗
             ║         🌸 H R I D A Y A O S 🌸             ║
-            ║          Human-Friendly CLI v5.8             ║
+            ║          Human-Friendly CLI v5.10            ║
             ║   Just talk naturally — no strict commands   ║
             ╚══════════════════════════════════════════════╝
           </span>
@@ -1052,6 +1052,12 @@
       <!-- SYSTEM CHECKS -->
       <div class="cmd-group">
         <div class="cmd-group-title">🖥️ System Checks</div>
+
+
+        <div class="cmd-item">
+          <span class="cmd-say">check my system</span>
+          <span class="cmd-desc">one unified scan across apps, games, and dev runtimes together</span>
+        </div>
 
         <div class="cmd-item">
           <span class="cmd-say">scan my system</span>
@@ -1416,7 +1422,7 @@
 </section>
 
   <section class="cta">
-    <h2>Ready to try Hridaya OS v5.8.0?</h2>
+    <h2>Ready to try Hridaya OS v5.10.0?</h2>
     <p>Free forever. Works on Windows, Mac, Linux and Android. No account needed.</p>
     <div class="cta-boxes">
       <div class="cta-box">
@@ -1453,6 +1459,12 @@
     }
 
     const demos = [
+    {
+  cmd: 'check my system',
+  out: "🌸 System Check\n\n🧰 Dev Runtimes\n✅ Node 24.13\n✅ Python 3.11\n✅ Rust 1.96\n⬜ Go\n⬜ Java\n\n🎮 Game Readiness\n⚠️ 50% — 2 issues\n\n🖥️ Apps\n✅ 2 ready\n\n💡 Run 'scan my system' for details.",
+  cls: 't-ok'
+},
+    
   {
     cmd: 'real scan app photoshop.exe',
     out: "🔍 Finding installed application...\n  ✅ Adobe Photoshop found\n  📄 photoshop.exe\n  🔧 Checking real DLLs...",
