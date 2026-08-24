@@ -42,6 +42,7 @@ HandBrake, Blender, Discord, Spotify and Zoom and more.
 > ⚠️ Windows only | 🔒 Official links only — no cracks, no piracy.
 
 ```
+check my system             → one unified scan across apps, games, and dev runtimes together
 scan my system              → full PC game-readiness check
 scan game gta_sa.exe        → check all requirements
 fix game gta_sa.exe         → show what's missing + fix links
@@ -142,6 +143,21 @@ create a react native app named myapp
 > 💡 **Pro Tip:** We keep the default menu concise so you aren't buried in choices. However, Hridaya OS also supports **SvelteKit, Astro, Bun, Remix, Hono, Elysia, and T3**. Just type `create a <framework> app named <name>` and it will scaffold automatically!
 ---
 
+---
+
+## 🐛 Reporting an Unrecognized Error (v5.9.0)
+
+> 💡 Hit an error Hridaya OS doesn't know? Report it instead of losing it.
+
+| What you want to do | Type this naturally |
+| --- | --- |
+| Report an error | `report error msvcp140.dll crashes photoshop on launch` |
+| Report a bug     | `report bug fortnite won't start after update` |
+
+Being honest about how this actually works: Hridaya OS is a solo-maintained, offline CLI tool with **no backend server** — there's no live crowd-sourced database silently collecting reports. What actually happens: your report is saved locally to `~/.hridaya/reports.json` so it's never lost, and a pre-filled GitHub Issue is opened in your browser (the real place these get triaged — see the [Issues page](https://github.com/Mohith933/HridayaOS/issues)). Nothing is sent anywhere unless you click "Submit new issue" yourself.
+
+---
+
 ## 🗂️ Project Structure
 
 ```
@@ -157,28 +173,33 @@ hridaya-os/
 ├── detector.js      ← Real-Time Detection Engine
 ├── appDB.js         ← Application requirements database 
 ├── scaffolder.js    ← Project scaffolding
+├── reportIssue.js   ← Local + GitHub error reporting (v5.9.0)
+├── unifiedScan.js   ← "check my system" unified diagnostics (v5.10.0)
+├── checkForUpdate.js ← Background npm update check (v5.10.0)
+├── scripts/
+│   └── verify-db.js ← Database integrity check, runs before every publish (v5.9.0)
 └── package.json     ← Project configuration
 ```
-
 ---
 
 ## 🗺️ Roadmap — v5.x.0 Continuous Improvement
 
-### ✅ v5.8.0 — Diagnostics Depth: Dev Runtimes, Games & Anti-Cheat (Current Release)
-- **Developer Environment Diagnostics:** Cross-platform checks for Node.js, Python, Rust, Go, and Java — works on Windows, macOS, and Linux, since a missing runtime matters everywhere, not just Windows. Automatically included in `scan app`/`fix app` for apps that need one (e.g. DBeaver needs Java).
-- **Game Detection Accuracy Pass:** Found and fixed real bugs while auditing `game.js` against `app.js`'s v5.6.0 fixes — VC++ 2017/2019 were missing entirely from the check list (any game requiring them, like GTA Trilogy: Definitive Edition, always failed the check even when correctly installed), .NET 4.0/4.5/4.8 all checked the same registry key and reported identically, and all DLL/DirectX paths were hardcoded to `C:\Windows` instead of resolving the real system drive.
-- **Cross-Platform Game Scanning:** `scan game` no longer refuses entirely on macOS/Linux — Java-based games (Minecraft Java Edition) now get a real Java check on any OS, while Windows-only checks (DirectX, DLLs) are skipped cleanly with a clear note instead of a blanket error.
-- **Anti-Cheat Conflict Detection:** New check for Vanguard (Valorant), Easy Anti-Cheat (Fortnite, Apex, Rocket League), and BattlEye (PUBG, Destiny 2) — flags whether the anti-cheat service is actually running, and whether known-conflicting tools (Cheat Engine, Process Hacker, x64dbg) are open at the same time.
+### ✅ v5.10.0 — Unified Diagnostics (Current Release)
+- **One Unified Scan:** A single `check my system` command that composes the already-tested app/game/runtime checks into one report, instead of requiring three separate commands. Reuses existing logic rather than duplicating it, so a future fix to any individual check automatically applies here too.
+- **Self-Update Awareness:** Hridaya OS checks npm in the background on startup and tells you if a newer version exists — advisory only, never auto-updates, never blocks startup, fails silently offline (no new dependency added — uses Node's built-in `https` module).
+- **Usage-Driven Scaffolding Stacks:** Not a one-time coding task — this is an ongoing practice of watching what people actually type and fail to match, and adding stacks based on real demand rather than guesses.
 
-### 📅 v5.9.0 — Trust & Data Integrity (Next Release)
-- **Automated Database Verification:** A `verify-db` check run before every publish that catches duplicate keys/names automatically — the kind of bug that let Genshin Impact and Stardew Valley silently exist twice in `gameDB.js` until it was caught by hand in v5.6.0.
-- **Community-Contributed Error Reports:** A structured way for users to submit a DLL/error Hridaya OS doesn't recognize yet, since no solo maintainer can personally hit every error on every OS/language setup worldwide.
-- **Steam Deck / Proton Compatibility Notes:** Flag known Linux/Proton quirks for games that have them.
+### 📅 v5.11.0 — Game Diagnostics: GPU & Driver Awareness (Next Release)
+- **GPU Driver Version Awareness:** Detect the installed GPU driver version and flag known-outdated drivers as a "crash on launch" cause — a large share of real game crashes trace back to this, and it's a different failure mode than a missing DLL or VC++ Redistributable.
+- **Steam Deck / Proton Coverage Expansion:** Extend v5.9.0's Linux/Proton compatibility notes to more titles as they're verified against real sources, not guessed.
+- **Community Report Follow-Through:** Close detection-accuracy gaps surfaced through v5.9.0's `report error` feature — the reporting pipeline only has value if reports actually turn into fixes.
 
-### 📅 v5.10.0 — Unified Diagnostics
-- **One Unified Scan:** A single `check my system` command that runs app, game, and dev-runtime diagnostics together and reports back in one place, instead of three separate commands.
-- **Self-Update Awareness:** Hridaya OS checks its own npm version on start and tells you if a newer release exists.
-- **Usage-Driven Scaffolding Stacks:** New scaffolding stacks get added based on what people actually type and fail to match, not guesses.
+### 📅 v5.12.0 — App Diagnostics: Version-Aware Runtime Checks
+- **Version-Specific Runtime Requirements:** v5.8.0 added yes/no runtime detection (is Node installed at all); this adds the next layer — is the *right version* installed (e.g. "Node 18+ required"), since many modern dev tools have real minimum-version requirements that "installed" alone doesn't capture.
+- **Cloud & Container Tooling:** Extend `appDB.js` with AWS CLI, Azure CLI, gcloud, kubectl, and Docker Compose — a natural continuation of v5.6.0's dev-tools category (DBeaver, Postman, Docker Desktop).
+
+### 📅 v5.13.0 — Scaffolding: Rust & Go Backend Stacks
+- **Closes a loop from v5.8.0:** that release added Rust and Go to the dev-runtime diagnostics, but there's still no way to scaffold *into* either language. This adds a Rust backend stack (Axum) and a Go backend stack (Gin) — the runtime check and the scaffold finally match up.
 
 ---
 
