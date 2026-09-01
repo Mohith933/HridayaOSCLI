@@ -214,7 +214,7 @@ https://github.com/Mohith933/HridayaOSCLI
 
 📱 **Scan & Pay - GPay / PhonePe / Paytm:**
 
-![UPI QR](Screenshot_2026-08-31-19-36-26-46_4336b74596784d9a2aa81f87c2016f50.jpg)
+![UPI QR](GooglePay_QR (1).png)
 
 **UPI ID:** `bmstpt1@okaxis`
 *How to pay: GPay Open -> Scan QR -> Pay ₹99/₹199*
