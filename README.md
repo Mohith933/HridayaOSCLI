@@ -205,21 +205,12 @@ hridaya-os/
 
 ## ⭐ Support Hridaya OS
 
-If Hridaya OS saved your time fixing games/apps, support in 3 ways:
+If Hridaya OS saved your time fixing games/apps, support in 2 ways:
 
 **1. ⭐ Star the project:**
 https://github.com/Mohith933/HridayaOSCLI
 
-**2. ❤️ Direct UPI Support (No Fees):**
-
-📱 **Scan & Pay - GPay / PhonePe / Paytm:**
-
-![UPI QR](GooglePay_QR(1).png)
-
-**UPI ID:** `bmstpt1@okaxis`
-*How to pay: GPay Open -> Scan QR -> Pay ₹99/₹199*
-
-**3. ▶️ Subscribe on YouTube for new features & tutorials:**
+**2. ▶️ Subscribe on YouTube for new features & tutorials:**
 https://www.youtube.com/@mohithsaib
 
 Bug reports and feature requests are always welcome! 🚀
