@@ -26,10 +26,10 @@ hridaya
 
 ```text
 check my security           → Full Security Overview
-check windows defender      → Checks Windows Secuirty
-check firewall              → Check public,private,domain
-check bitlocker             → checks bitlocker issues
-check sandbox               → check sandbox issues
+check windows defender      → Check Antivirus and real-time protection status
+check firewall              → Verify Windows Firewall profiles
+check bitlocker             → Audit disk encryption and volume protection
+check sandbox               → Analyze system isolation and sandbox readiness
 ```
 ---
 
