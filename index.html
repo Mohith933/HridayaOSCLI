@@ -611,7 +611,7 @@
       display: block;
       font-family: var(--mono);
       font-size: 0.76rem;
-      color: #0cbfaa;
+      color: var(--cyan);
       margin-bottom: 0.1rem;
     }
 
@@ -768,10 +768,10 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-badge">🌸 v5.10.0 — 5 Core Modules Complete!</div>
+    <div class="hero-badge">🌸 v6.7.0 — Phase 6 Security & Isolation Modules Live!</div>
     <h1>Stop memorizing<br /><span class="highlight">computer commands.</span></h1>
     <p class="hero-tagline">Hridaya OS lets you talk to your computer in plain English — manage files, memory, disks,
-      games, applications and create projects just by saying what you want.</p>
+      games, applications, scaffolding, and streamlined security audits just by saying what you want.</p>
     <p class="hero-simple">✨ No tech knowledge needed. Just type naturally.</p>
     <div class="install-wrap" id="install">
       <div class="install-box">
@@ -791,19 +791,20 @@
     <div class="phase-pill done">✅ Phase 3 — Disk Management</div>
     <div class="phase-pill done">✅ Phase 4 — Game Management</div>
     <div class="phase-pill done">✅ Phase 5 — App Management</div>
+    <div class="phase-pill done">✅ Phase 6 — Security & Isolation</div>
   </div>
 
   <div class="stats">
     <div class="stat-item">
-      <div class="stat-num">4.0k+</div>
+      <div class="stat-num">4.5k+</div>
       <div class="stat-label">npm Downloads</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">5</div>
+      <div class="stat-num">6</div>
       <div class="stat-label">Core Modules</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">40+</div>
+      <div class="stat-num">45+</div>
       <div class="stat-label">Commands</div>
     </div>
     <div class="stat-item">
@@ -831,14 +832,14 @@
             RAM</span></div>
         <div class="compare-item">Open Disk Management → scary UI → confused<span class="desc">Check disk space</span>
         </div>
-        <div class="compare-item">mkdir projects<span class="desc">Create a folder</span></div>
+        <div class="compare-item">Check Firewall & BitLocker via tedious control panels<span class="desc">Security checks</span></div>
       </div>
       <div class="compare-box new">
         <div class="compare-label">😊 Hridaya OS way</div>
         <div class="compare-item">fix error d3dx9_43.dll<span class="desc">Instant fix + official link!</span></div>
         <div class="compare-item">kill whatever is eating my RAM<span class="desc">One sentence — done!</span></div>
         <div class="compare-item">show disk space<span class="desc">Simple and clear</span></div>
-        <div class="compare-item">create a folder named projects<span class="desc">Plain English</span></div>
+        <div class="compare-item">check windows defender / check sandbox<span class="desc">Safe read-only audit with [Y/N] prompts</span></div>
       </div>
     </div>
 
@@ -855,14 +856,14 @@
         <p>Skip memorizing commands. Focus on building real things from day one.</p>
       </div>
       <div class="who-card">
-        <div class="who-icon">🎨</div>
-        <h3>Designers</h3>
-        <p>Organize files, free up space and RAM without touching confusing commands.</p>
+        <div class="who-icon">🛡️</div>
+        <h3>Security-Conscious</h3>
+        <p>Quickly inspect Defender, BitLocker, Firewall, and sandbox isolation status risk-free.</p>
       </div>
       <div class="who-card">
         <div class="who-icon">💻</div>
         <h3>Developers</h3>
-        <p>Scaffold full projects, manage memory and disk — in seconds.</p>
+        <p>Scaffold full projects, manage memory and check dev runtimes seamlessly.</p>
       </div>
       <div class="who-card">
         <div class="who-icon">🏠</div>
@@ -886,13 +887,13 @@
           <div class="dot dr"></div>
           <div class="dot dy"></div>
           <div class="dot dg"></div>
-          <div class="t-title">hridaya-os — terminal — v5.10.0</div>
+          <div class="t-title">hridaya-os — terminal — v6.7.0</div>
         </div>
         <div class="t-body">
           <span class="t-line t-banner">
             ╔══════════════════════════════════════════════╗
             ║         🌸 H R I D A Y A O S 🌸             ║
-            ║          Human-Friendly CLI v5.10            ║
+            ║          Human-Friendly CLI v6.7             ║
             ║   Just talk naturally — no strict commands   ║
             ╚══════════════════════════════════════════════╝
           </span>
@@ -943,6 +944,33 @@
 
     <div class="cmd-grid">
 
+      <!-- SECURITY MANAGEMENT -->
+      <div class="cmd-group">
+        <div class="cmd-group-title">
+          🛡️ Security Management <span class="new-tag">v6.7</span>
+        </div>
+
+        <div class="cmd-item">
+          <span class="cmd-say">check windows defender</span>
+          <span class="cmd-desc">Check Antivirus and real-time protection status</span>
+        </div>
+
+        <div class="cmd-item">
+          <span class="cmd-say">check firewall</span>
+          <span class="cmd-desc">Verify Windows Firewall profiles</span>
+        </div>
+
+        <div class="cmd-item">
+          <span class="cmd-say">check bitlocker</span>
+          <span class="cmd-desc">Audit disk encryption and volume protection</span>
+        </div>
+
+        <div class="cmd-item">
+          <span class="cmd-say">check sandbox</span>
+          <span class="cmd-desc">Analyze system isolation and sandbox readiness</span>
+        </div>
+      </div>
+
       <!-- APPLICATION MANAGEMENT -->
       <div class="cmd-group">
         <div class="cmd-group-title">
@@ -957,26 +985,6 @@
         <div class="cmd-item">
           <span class="cmd-say">real scan app photoshop.exe</span>
           <span class="cmd-desc">Find the real installed app and scan its files</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">real scan app code</span>
-          <span class="cmd-desc">Detect installed VS Code and check its real DLLs</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">what apps can i run</span>
-          <span class="cmd-desc">Check supported apps installed on your PC</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">which apps can i run</span>
-          <span class="cmd-desc">Check application readiness</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">fix app photoshop.exe</span>
-          <span class="cmd-desc">Show missing application components</span>
         </div>
 
         <div class="cmd-item">
@@ -1003,43 +1011,13 @@
         </div>
 
         <div class="cmd-item">
-          <span class="cmd-say">show games</span>
-          <span class="cmd-desc">Show detected games</span>
-        </div>
-
-        <div class="cmd-item">
           <span class="cmd-say">real scan game gta_sa.exe</span>
           <span class="cmd-desc">Find the real game and check its files</span>
         </div>
 
         <div class="cmd-item">
-          <span class="cmd-say">scan game gta_sa.exe</span>
-          <span class="cmd-desc">Check game requirements</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">detect launchers</span>
-          <span class="cmd-desc">Detect installed game launchers</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">show game launchers</span>
-          <span class="cmd-desc">Show detected launchers</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">fix game gta_sa.exe</span>
-          <span class="cmd-desc">Show missing game components</span>
-        </div>
-
-        <div class="cmd-item">
           <span class="cmd-say">fix error d3dx9_43.dll</span>
           <span class="cmd-desc">Find a fix for a game DLL error</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">fix all games</span>
-          <span class="cmd-desc">Repair common game issues</span>
         </div>
 
         <div class="cmd-item">
@@ -1053,15 +1031,9 @@
       <div class="cmd-group">
         <div class="cmd-group-title">🖥️ System Checks</div>
 
-
         <div class="cmd-item">
           <span class="cmd-say">check my system</span>
-          <span class="cmd-desc">one unified scan across apps, games, and dev runtimes together</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">scan my system</span>
-          <span class="cmd-desc">Full PC game-readiness check</span>
+          <span class="cmd-desc">Unified scan across apps, games, and runtimes</span>
         </div>
 
         <div class="cmd-item">
@@ -1077,11 +1049,6 @@
         <div class="cmd-item">
           <span class="cmd-say">check visual c++</span>
           <span class="cmd-desc">Check installed VC++ Redistributables</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">check dotnet</span>
-          <span class="cmd-desc">Check installed .NET Framework versions</span>
         </div>
       </div>
 
@@ -1101,11 +1068,6 @@
         </div>
 
         <div class="cmd-item">
-          <span class="cmd-say">how much space is downloads using</span>
-          <span class="cmd-desc">Check a specific folder size</span>
-        </div>
-
-        <div class="cmd-item">
           <span class="cmd-say">find duplicate files</span>
           <span class="cmd-desc">Find duplicate files</span>
         </div>
@@ -1113,26 +1075,6 @@
         <div class="cmd-item">
           <span class="cmd-say">clean temp files</span>
           <span class="cmd-desc">Clean temporary files</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">empty recycle bin</span>
-          <span class="cmd-desc">Empty the recycle bin</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">save disk report</span>
-          <span class="cmd-desc">Save a disk report as .txt</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">warn me when disk goes below 5GB</span>
-          <span class="cmd-desc">Monitor available disk space</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">find files over 1GB</span>
-          <span class="cmd-desc">Find large files</span>
         </div>
       </div>
 
@@ -1155,36 +1097,6 @@
           <span class="cmd-say">show memory usage</span>
           <span class="cmd-desc">Show total, used and free RAM</span>
         </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">save memory report</span>
-          <span class="cmd-desc">Save memory information as .txt</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">compare chrome and discord memory</span>
-          <span class="cmd-desc">Compare process memory usage</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">warn me when RAM goes above 80%</span>
-          <span class="cmd-desc">Monitor RAM usage</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">start memory history</span>
-          <span class="cmd-desc">Track memory usage over time</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">list running processes</span>
-          <span class="cmd-desc">Show running processes</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">kill chrome</span>
-          <span class="cmd-desc">Kill a specific process</span>
-        </div>
       </div>
 
 
@@ -1198,73 +1110,8 @@
         </div>
 
         <div class="cmd-item">
-          <span class="cmd-say">delete the folder named old</span>
-          <span class="cmd-desc">Remove a folder</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">copy file notes.txt to backup/</span>
-          <span class="cmd-desc">Copy a file</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">move folder work to archive/</span>
-          <span class="cmd-desc">Move a folder</span>
-        </div>
-
-        <div class="cmd-item">
           <span class="cmd-say">arrange my files</span>
           <span class="cmd-desc">Auto-organize files</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">create 3 folders named work, study, games</span>
-          <span class="cmd-desc">Create multiple folders</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">open notes.txt</span>
-          <span class="cmd-desc">Open a file</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">hide notes.txt</span>
-          <span class="cmd-desc">Hide a file</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">unhide notes.txt</span>
-          <span class="cmd-desc">Unhide a file</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">show hidden files</span>
-          <span class="cmd-desc">Display hidden files</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">search for notes.txt</span>
-          <span class="cmd-desc">Search for a file</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">how big is notes.txt</span>
-          <span class="cmd-desc">Check file size</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">count files</span>
-          <span class="cmd-desc">Count files in the current folder</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">clear folder projects</span>
-          <span class="cmd-desc">Clear a folder</span>
-        </div>
-
-        <div class="cmd-item">
-          <span class="cmd-say">go to downloads</span>
-          <span class="cmd-desc">Change current directory</span>
         </div>
 
         <div class="cmd-item">
@@ -1281,148 +1128,37 @@
 
       <!-- PROJECT SCAFFOLDING -->
       <div class="cmd-group">
-  <div class="cmd-group-title">
-    🚀 Project Scaffolding <span class="new-tag">v5.3</span>
-  </div>
+        <div class="cmd-group-title">
+          🚀 Project Scaffolding <span class="new-tag">v5.3</span>
+        </div>
 
-  <!-- ─── BASE FRAMEWORKS ─── -->
-  <div class="cmd-item">
-    <span class="cmd-say">create a react app named myapp</span>
-    <span class="cmd-desc">React project</span>
-  </div>
+        <div class="cmd-item">
+          <span class="cmd-say">create a react app named myapp</span>
+          <span class="cmd-desc">React project</span>
+        </div>
 
-  <div class="cmd-item">
-    <span class="cmd-say">create a next.js project named blog</span>
-    <span class="cmd-desc">Next.js project</span>
-  </div>
+        <div class="cmd-item">
+          <span class="cmd-say">create a next.js project named blog</span>
+          <span class="cmd-desc">Next.js project</span>
+        </div>
 
-  <div class="cmd-item">
-    <span class="cmd-say">create an express app named api</span>
-    <span class="cmd-desc">Express server</span>
-  </div>
+        <div class="cmd-item">
+          <span class="cmd-say">create an express app named api</span>
+          <span class="cmd-desc">Express server</span>
+        </div>
 
-  <div class="cmd-item">
-    <span class="cmd-say">create a node project named tool</span>
-    <span class="cmd-desc">Node.js project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a django project named site</span>
-    <span class="cmd-desc">Django project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a spring boot app named service</span>
-    <span class="cmd-desc">Spring Boot project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a vite app named myapp</span>
-    <span class="cmd-desc">Vite project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a fastapi project named api</span>
-    <span class="cmd-desc">FastAPI backend</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a nestjs project named backend</span>
-    <span class="cmd-desc">NestJS backend</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a flutter app named myapp</span>
-    <span class="cmd-desc">Flutter application</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a react native app named myapp</span>
-    <span class="cmd-desc">React Native application</span>
-  </div>
-
-  <!-- ─── NEW EXPANDED FRAMEWORKS ─── -->
-  <div class="cmd-item">
-    <span class="cmd-say">create a svelte project named myapp</span>
-    <span class="cmd-desc">SvelteKit project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create an astro project named site</span>
-    <span class="cmd-desc">Astro website</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a remix app named myapp</span>
-    <span class="cmd-desc">Remix web app</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a bun project named myapp</span>
-    <span class="cmd-desc">Bun native project</span>
-  </div>
-
-  <!-- ─── MOBILE & HYBRID ─── -->
-  <div class="cmd-item">
-    <span class="cmd-say">create an expo app named mobile</span>
-    <span class="cmd-desc">Expo React Native app</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a capacitor app named myapp</span>
-    <span class="cmd-desc">Capacitor Web+Mobile app</span>
-  </div>
-
-  <!-- ─── BACKEND & MICROSERVICES ─── -->
-  <div class="cmd-item">
-    <span class="cmd-say">create a hono project named api</span>
-    <span class="cmd-desc">Hono web API</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create an elysia app named service</span>
-    <span class="cmd-desc">Elysia Bun API</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a trpc project named api</span>
-    <span class="cmd-desc">tRPC standalone API</span>
-  </div>
-
-  <!-- ─── FULL-STACK STACKS ─── -->
-  <div class="cmd-item">
-    <span class="cmd-say">create a t3 app named fullstack</span>
-    <span class="cmd-desc">T3 Stack project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a mern stack named fullstack</span>
-    <span class="cmd-desc">MERN Full-Stack project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a mean stack named fullstack</span>
-    <span class="cmd-desc">MEAN Full-Stack project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a langchain app named bot</span>
-    <span class="cmd-desc">LangChain project</span>
-  </div>
-
-  <div class="cmd-item">
-    <span class="cmd-say">create a streamlit dashboard named mydash</span>
-    <span class="cmd-desc">Streamlit project</span>
-  </div>
-  
-</div>
+        <div class="cmd-item">
+          <span class="cmd-say">create a python fastapi project</span>
+          <span class="cmd-desc">FastAPI backend</span>
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
 
   <section class="cta">
-    <h2>Ready to try Hridaya OS v5.10.0?</h2>
+    <h2>Ready to try Hridaya OS v6.7.0?</h2>
     <p>Free forever. Works on Windows, Mac, Linux and Android. No account needed.</p>
     <div class="cta-boxes">
       <div class="cta-box">
@@ -1459,74 +1195,42 @@
     }
 
     const demos = [
-    {
-  cmd: 'check my system',
-  out: "🌸 System Check\n\n🧰 Dev Runtimes\n✅ Node 24.13\n✅ Python 3.11\n✅ Rust 1.96\n⬜ Go\n⬜ Java\n\n🎮 Game Readiness\n⚠️ 50% — 2 issues\n\n🖥️ Apps\n✅ 2 ready\n\n💡 Run 'scan my system' for details.",
-  cls: 't-ok'
-},
-    
-  {
-    cmd: 'real scan app photoshop.exe',
-    out: "🔍 Finding installed application...\n  ✅ Adobe Photoshop found\n  📄 photoshop.exe\n  🔧 Checking real DLLs...",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'real scan app code',
-    out: "🔍 Finding installed application...\n  ✅ Visual Studio Code found\n  📄 Code.exe\n  🔧 Checking real DLLs...",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'what apps can i run',
-    out: "🖥️ Checking installed applications...\n  ✅ Ready to use\n  ⚠️ Some applications need runtime fixes",
-    cls: 't-warn'
-  },
-  {
-    cmd: 'scan installed games',
-    out: "🎮 Scanning your system...\n  ✅ Games detected\n  🔍 Checking installed game paths...",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'real scan game gta_sa.exe',
-    out: "🔍 Finding GTA San Andreas...\n  ✅ Game found\n  📁 Checking actual installation files\n  🔧 Checking real DLLs...",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'detect launchers',
-    out: "🎮 Detecting game launchers...\n  ✅ Steam\n  ✅ Epic Games\n  ✅ Rockstar Games",
-    cls: 't-ok'
-  },
-
-  {
-    cmd: "what's eating my memory",
-    out: "🥇 chrome.exe 1.2 GB ██████████\n  🥈 code.exe 450 MB █████░░░░░",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'kill whatever is eating my RAM',
-    out: "✅ 💀 Killed 'chrome.exe' — freed 1.2 GB of RAM!",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'show disk space',
-    out: "🟡 C: 174.2 GB used / 256 GB ██████████\n  🟢 D: 45.1 GB used / 500 GB ██░░░░░░░░",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'arrange my files',
-    out: "✅ 🖼️ images/ 🎵 audios/ 💻 code/ 📄 documents/",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'create a react app named myapp',
-    out: "🚀 Creating React project...\n  📦 Installing dependencies...\n  ✅ Project 'myapp' created!",
-    cls: 't-ok'
-  },
-  {
-    cmd: 'create a django project named site',
-    out: "🚀 Creating Django project...\n  🐍 Setting up project...\n  ✅ Project 'site' created!",
-    cls: 't-ok'
-  }
-];
+      {
+        cmd: 'check windows defender',
+        out: "🦠 Windows Defender Status\n✅ Antivirus Protection: Enabled\n✅ Real-Time Protection: Enabled",
+        cls: 't-ok'
+      },
+      {
+        cmd: 'check firewall',
+        out: "🔥 Firewall Profiles\n✅ DomainProfile : Enabled\n✅ StandardProfile : Enabled\n✅ PublicProfile : Enabled",
+        cls: 't-ok'
+      },
+      {
+        cmd: 'check bitlocker',
+        out: "🔒 BitLocker Disk Encryption\n✅ Drive C: → Protected (Encrypted)",
+        cls: 't-ok'
+      },
+      {
+        cmd: 'check sandbox',
+        out: "🛡️ Sandbox & Isolation Check\n🟢 Environment Type: Bare Metal / Standard OS\n🟢 Windows Sandbox Feature: Available & Enabled",
+        cls: 't-ok'
+      },
+      {
+        cmd: 'check my system',
+        out: "🌸 System Check\n\n🧰 Dev Runtimes\n✅ Node 24.13\n✅ Python 3.11\n\n🎮 Game Readiness\n⚠️ 50% — 2 issues\n\n🖥️ Apps\n✅ 2 ready",
+        cls: 't-ok'
+      },
+      {
+        cmd: "what's eating my memory",
+        out: "🥇 chrome.exe 1.2 GB ██████████\n  🥈 code.exe 450 MB █████░░░░░",
+        cls: 't-ok'
+      },
+      {
+        cmd: 'show disk space',
+        out: "🟡 C: 174.2 GB used / 256 GB ██████████\n  🟢 D: 45.1 GB used / 500 GB ██░░░░░░░░",
+        cls: 't-ok'
+      }
+    ];
 
     let idx = 0;
     const typer = document.getElementById('typer');
@@ -1565,5 +1269,3 @@
 </body>
 
 </html>
-
-
