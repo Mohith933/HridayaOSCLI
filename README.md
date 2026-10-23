@@ -18,6 +18,21 @@ hridaya
 ```
 ---
 
+---
+
+## 🛡️ Security Management
+
+> 🛡️ Read-only, always — Hridaya OS is not antivirus and never changes a setting for you. It only reports what's currently on or off, so you know what to go fix yourself.
+
+```text
+check my security           → Full Security Overview
+check windows defender      → Checks Windows Secuirty
+check firewall              → Check public,private,domain
+check bitlocker             → checks bitlocker issues
+check sandbox               → check sandbox issues
+```
+---
+
 ## 🖥️ Application Management
 
 > Fix common application errors in seconds — no searching through forums.
@@ -176,30 +191,32 @@ hridaya-os/
 ├── reportIssue.js   ← Local + GitHub error reporting (v5.9.0)
 ├── unifiedScan.js   ← "check my system" unified diagnostics (v5.10.0)
 ├── checkForUpdate.js ← Background npm update check (v5.10.0)
+├── winRuntime.js    ← Shared Windows runtime detection, used by app.js + game.js (v5.12.0)
+├── security.js      ← Security hygiene checks, read-only (v6.0.0)
 ├── scripts/
 │   └── verify-db.js ← Database integrity check, runs before every publish (v5.9.0)
 └── package.json     ← Project configuration
 ```
+
 ---
 
-## 🗺️ Roadmap — v5.x.0 Continuous Improvement
+## 🗺️ Roadmap — v6.x.0 Continuous Improvement
 
-### ✅ v5.10.0 — Unified Diagnostics (Current Release)
-- **One Unified Scan:** A single `check my system` command that composes the already-tested app/game/runtime checks into one report, instead of requiring three separate commands. Reuses existing logic rather than duplicating it, so a future fix to any individual check automatically applies here too.
-- **Self-Update Awareness:** Hridaya OS checks npm in the background on startup and tells you if a newer version exists — advisory only, never auto-updates, never blocks startup, fails silently offline (no new dependency added — uses Node's built-in `https` module).
-- **Usage-Driven Scaffolding Stacks:** Not a one-time coding task — this is an ongoing practice of watching what people actually type and fail to match, and adding stacks based on real demand rather than guesses.
+### ✅ v6.6.0 — File Permission Audits & Hardening Advice
 
-### 📅 v5.11.0 — Game Diagnostics: GPU & Driver Awareness (Next Release)
-- **GPU Driver Version Awareness:** Detect the installed GPU driver version and flag known-outdated drivers as a "crash on launch" cause — a large share of real game crashes trace back to this, and it's a different failure mode than a missing DLL or VC++ Redistributable.
-- **Steam Deck / Proton Coverage Expansion:** Extend v5.9.0's Linux/Proton compatibility notes to more titles as they're verified against real sources, not guessed.
-- **Community Report Follow-Through:** Close detection-accuracy gaps surfaced through v5.9.0's `report error` feature — the reporting pipeline only has value if reports actually turn into fixes.
+Introduces directory and file permission checks across sensitive workspace folders and configuration files (e.g., SSH keys, `.env` files, git configurations). Provides actionable security hardening advice and explicit manual commands to remediate loose permissions safely.
 
-### 📅 v5.12.0 — App Diagnostics: Version-Aware Runtime Checks
-- **Version-Specific Runtime Requirements:** v5.8.0 added yes/no runtime detection (is Node installed at all); this adds the next layer — is the *right version* installed (e.g. "Node 18+ required"), since many modern dev tools have real minimum-version requirements that "installed" alone doesn't capture.
-- **Cloud & Container Tooling:** Extend `appDB.js` with AWS CLI, Azure CLI, gcloud, kubectl, and Docker Compose — a natural continuation of v5.6.0's dev-tools category (DBeaver, Postman, Docker Desktop).
+---
 
-### 📅 v5.13.0 — Scaffolding: Rust & Go Backend Stacks
-- **Closes a loop from v5.8.0:** that release added Rust and Go to the dev-runtime diagnostics, but there's still no way to scaffold *into* either language. This adds a Rust backend stack (Axum) and a Go backend stack (Gin) — the runtime check and the scaffold finally match up.
+### ✅ v6.7.0 — Streamlined Essential Security & Safe Isolation Checks (Current Release)
+
+Focused security upgrade that streamlined the module by removing redundant file permission, path, and port audit commands. Retains only the top 4 essential security pain points users care about most—**Windows Defender**, **Firewall**, **BitLocker Disk Encryption**, and a new **Safe Sandbox/Isolation Check**—complete with an interactive `[Y/N]` confirmation flow for zero OS risk.
+
+---
+
+### 📅 v6.8.0 — Command Hardening & Existing Feature Refinement (Next Release)
+
+Focuses heavily on internal security hardening and error safety for all existing CLI commands without introducing any new commands. Enhances input sanitization, safe sub-process execution boundaries, and path traversal protections across core modules.
 
 ---
 
