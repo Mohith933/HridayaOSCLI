@@ -202,21 +202,21 @@ hridaya-os/
 
 ## 🗺️ Roadmap — v6.x.0 Continuous Improvement
 
-### ✅ v6.6.0 — File Permission Audits & Hardening Advice
+### ✅ v6.8.0 — Deep Security Diagnostics & Command Hardening (Current Release)
 
-Introduces directory and file permission checks across sensitive workspace folders and configuration files (e.g., SSH keys, `.env` files, git configurations). Provides actionable security hardening advice and explicit manual commands to remediate loose permissions safely.
-
----
-
-### ✅ v6.7.0 — Streamlined Essential Security & Safe Isolation Checks (Current Release)
-
-Focused security upgrade that streamlined the module by removing redundant file permission, path, and port audit commands. Retains only the top 4 essential security pain points users care about most—**Windows Defender**, **Firewall**, **BitLocker Disk Encryption**, and a new **Safe Sandbox/Isolation Check**—complete with an interactive `[Y/N]` confirmation flow for zero OS risk.
+Enhances Defender, Firewall, BitLocker, and Sandbox checks with deep-dive read-only diagnostics while enforcing strict input sanitization, 300-char boundary limits, and sub-process execution timeouts across all CLI modules.
 
 ---
 
-### 📅 v6.8.0 — Command Hardening & Existing Feature Refinement (Next Release)
+### 📅 v6.9.0 — Project Scaffolding Expansion (Next Release)
 
-Focuses heavily on internal security hardening and error safety for all existing CLI commands without introducing any new commands. Enhances input sanitization, safe sub-process execution boundaries, and path traversal protections across core modules.
+Focuses on expanding and smoothing out the project scaffolding module (adding more frameworks, modern boilerplates, and streamlined setup flows).
+
+---
+
+### 📅 v6.10.0 — Final Security Polish & Guardrail (Coming Soon)
+
+The final component of the security update arc. Implements safe final guardrails, error-handling polish for permission queries, and ensures zero OS-burden or risky registry edits remain.
 
 ---
 
