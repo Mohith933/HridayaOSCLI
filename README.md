@@ -208,7 +208,7 @@ Enhances Defender, Firewall, BitLocker, and Sandbox checks with deep-dive read-o
 
 ---
 
-### 📅 v6.9.0 — Project Scaffolding Expansion (Next Release)
+### ✅ v6.9.0 — Project Scaffolding Expansion (Next Release)
 
 Focuses on expanding and smoothing out the project scaffolding module (adding more frameworks, modern boilerplates, and streamlined setup flows).
 
