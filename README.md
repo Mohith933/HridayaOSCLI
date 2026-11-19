@@ -20,6 +20,20 @@ hridaya
 
 ---
 
+## 🖨️ Driver & Hardware Management
+
+> 🛡️ Read-only diagnostics for inspection, plus safe software-level repairs for stuck spool queues and error-state peripherals without altering system binaries or hardware.
+
+```text
+`check printers`           → Check connected printers & spooler
+`check spooler`            → Check print spooler service
+`check audio`              → Check Windows Audio service (`Audiosrv`)
+`check bluetooth`          → Check connected Bluetooth devices
+`check peripherals`        → Scan for problematic USB / PnP devices
+`fix print spooler`        → Purge stuck print jobs & restart spooler 
+`fix peripherals`          → Software-reset error-state peripherals 
+```
+
 ## 🛡️ Security Management
 
 > 🛡️ Read-only, always — Hridaya OS is not antivirus and never changes a setting for you. It only reports what's currently on or off, so you know what to go fix yourself.
@@ -188,37 +202,41 @@ hridaya-os/
 ├── detector.js      ← Real-Time Detection Engine
 ├── appDB.js         ← Application requirements database 
 ├── scaffolder.js    ← Project scaffolding
-├── reportIssue.js   ← Local + GitHub error reporting (v5.9.0)
-├── unifiedScan.js   ← "check my system" unified diagnostics (v5.10.0)
-├── checkForUpdate.js ← Background npm update check (v5.10.0)
-├── winRuntime.js    ← Shared Windows runtime detection, used by app.js + game.js (v5.12.0)
-├── security.js      ← Security hygiene checks, read-only (v6.0.0)
+├── reportIssue.js   ← Local + GitHub error reporting
+├── unifiedScan.js   ← "check my system" unified diagnostics
+├── checkForUpdate.js ← Background npm update check
+├── winRuntime.js    ← Shared Windows runtime detection, used by app.js + game.js
+├── security.js      ← Security hygiene checks, read-only
+├── guardrails.js    ← Final Security Guardrails & Input Hardening
+├── drivers.js       ← Real-World Hardware & Driver Diagnostics (v7.0.0)
 ├── scripts/
-│   └── verify-db.js ← Database integrity check, runs before every publish (v5.9.0)
+│   └── verify-db.js ← Database integrity check, runs before every publish
 └── package.json     ← Project configuration
 ```
 
 ---
 
-## 🗺️ Roadmap — v6.x.0 Continuous Improvement
+## 🗺️ Roadmap — v7.x.0 Evolution
 
-### ✅ v6.8.0 — Deep Security Diagnostics & Command Hardening (Current Release)
-
-Enhances Defender, Firewall, BitLocker, and Sandbox checks with deep-dive read-only diagnostics while enforcing strict input sanitization, 300-char boundary limits, and sub-process execution timeouts across all CLI modules.
-
----
-
-### ✅ v6.9.0 — Project Scaffolding Expansion (Next Release)
-
-Focuses on expanding and smoothing out the project scaffolding module (adding more frameworks, modern boilerplates, and streamlined setup flows).
+### ✅ v7.0.0 — Real-World Hardware & Driver Diagnostics
+Introduced read-only peripheral checks for printers, spooler states, audio services (`Audiosrv`), Bluetooth devices, and error-state Plug-and-Play peripherals.
 
 ---
 
-### 📅 v6.10.0 — Final Security Polish & Guardrail (Coming Soon)
-
-The final component of the security update arc. Implements safe final guardrails, error-handling polish for permission queries, and ensures zero OS-burden or risky registry edits remain.
+### ✅ v7.0.1 — Funding URL Patch
+Fixed package funding configuration metadata and verified release readiness.
 
 ---
+
+### ✅ v7.1.0 — Software-Level Spooler & Peripheral Fixes (Current Version)
+Adds safe software-level repairs to clear stuck `.SHD`/`.SPL` print spool files, restart the Print Spooler service, and software-reset problematic PnP peripheral devices by `InstanceId`.
+
+--- 
+
+### 🎮 v7.2.0 — Modern Game Engine & Emerging Stack Scaffolding (Coming Soon)
+Expands `scaffolder.js` with ready-to-run starter templates for modern indie/web game development (**Phaser 3**, **Three.js + Vite**, **Kaboom/Kaplay**, **Godot 4 GDScript starter**) alongside emerging AI/full-stack templates (**MCP Server**, **TanStack Start**, **FastAPI + LangGraph**).
+
+--- 
 
 ## ⭐ Support Hridaya OS
 
