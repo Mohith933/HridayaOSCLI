@@ -257,15 +257,6 @@ https://www.youtube.com/@mohithsaib
 
 Bug reports and feature requests are always welcome! 🚀
 
-
-## ☕ Support the Creator
-
-If Hridaya OS has saved you time or made your workflow easier, consider buying me a Sunday coffee ☕ via GPay:
-
-<p align="center">
-  <img src="GooglePay_QR(1).png" alt="GPay QR Code" width="250"/>
-</p>
-
 *Thank you for supporting independent open-source development! 🌸*
 
 ---
