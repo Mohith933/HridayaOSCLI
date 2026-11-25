@@ -218,23 +218,30 @@ hridaya-os/
 
 ## 🗺️ Roadmap — v7.x.0 Evolution
 
-### ✅ v7.0.0 — Real-World Hardware & Driver Diagnostics
-Introduced read-only peripheral checks for printers, spooler states, audio services (`Audiosrv`), Bluetooth devices, and error-state Plug-and-Play peripherals.
-
----
-
-### ✅ v7.0.1 — Funding URL Patch
-Fixed package funding configuration metadata and verified release readiness.
-
----
-
-### ✅ v7.1.0 — Software-Level Spooler & Peripheral Fixes (Current Version)
+### ✅ v7.1.0 — Software-Level Spooler & Peripheral Fixes 
 Adds safe software-level repairs to clear stuck `.SHD`/`.SPL` print spool files, restart the Print Spooler service, and software-reset problematic PnP peripheral devices by `InstanceId`.
 
 --- 
 
-### 🎮 v7.2.0 — Modern Game Engine & Emerging Stack Scaffolding (Coming Soon)
+### ✅ v7.2.0 — Modern Game Engine & Emerging Stack Scaffolding (Current Version)
 Expands `scaffolder.js` with ready-to-run starter templates for modern indie/web game development (**Phaser 3**, **Three.js + Vite**, **Kaboom/Kaplay**, **Godot 4 GDScript starter**) alongside emerging AI/full-stack templates (**MCP Server**, **TanStack Start**, **FastAPI + LangGraph**).
+
+---
+
+### 🎯 v7.3.0 — Exact Game DLL & Runtime Error Mapper (GTA 6 & Classic Titles)
+Maps exact missing/corrupted `.dll` and runtime errors across modern AAA titles (such as **GTA 6** and contemporary engines) and classic PC games so users get the exact official fix instead of wasting time searching random forums or risky DLL sites:
+* **Visual C++ Redistributable (`vcruntime140.dll`, `vcruntime140_1.dll`, `msvcp140.dll`, `msvcp140_1.dll`)** — Maps to official Microsoft Visual C++ Redistributable (x64 & x86) repair/install guidance.
+* **DirectX 11 / 12 & DXGI (`d3d12.dll`, `d3d11.dll`, `dxgi.dll`, `d3dcompiler_47.dll`)** — Maps to Windows Update, GPU driver checks, and system file checks (`sfc /scannow`) rather than fake standalone "DirectX 12" downloads.
+* **Legacy DirectX 9 / XInput (`d3dx9_43.dll`, `xinput1_3.dll`, `xinput1_4.dll`, `d3dcompiler_43.dll`)** — Maps to the official DirectX End-User Runtime installer for older games.
+* **Clear Fix Guidance** — Explains *why* the error happens, which official runtime package fixes it, and why users should avoid copying random `.dll` files from untrusted sites.
+
+---
+
+### 🩹 v7.4.0 — Pain-Remover & One-Shot Diagnostic Triage
+Eliminates everyday terminal and PC setup friction so users go straight from an error message to a working fix:
+* **Plain-English Error Triage** — Translates cryptic launch errors, missing runtime prompts, and service/permission blocks into clear next steps without jargon.
+* **Safe Verification & Repair Flow** — Guides users through official runtime repairs, game file verification, and safe system checks step by step.
+* **Zero-Fluff Actionable Output** — Highlights the exact command or official installer needed first so users don't lose hours guessing.
 
 --- 
 
